@@ -62,7 +62,6 @@ Notes from the discussion
         - Tag these events with timestamp, Jason cycle, etc.
     - Support for everything: even custom defined objects from agent devs
         - They can register their components and send their own custom events
-        - They can then
 
 - **API and/or Front End:** Consume from MQ
     - Have default endpoints that allow data to be visualized
