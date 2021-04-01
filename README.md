@@ -1,6 +1,9 @@
 # Agent Black Box
 
-Notes for the discussion
+**To run project**: build using gradle and then execute the ProjectRunner class
+
+
+### Notes for the discussion
 
 - What is the ideal debugger/ black box for an agent?
   - What was in the belief base?
