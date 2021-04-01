@@ -26,4 +26,4 @@ Notes from the discussion
 - RabbitMQ system for logging - Pub and Sub - connect to a port
   - Launch it as a service, don't need to mess with sockets
   - https://www.rabbitmq.com/
-- AS Competition papers - mention debuggability. Who are they citing?
+- MAS Competition papers - mention debuggability. Who are they citing?
