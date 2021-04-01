@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+group 'com.NMAI-lab'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 13
+
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+    maven { url "http://jacamo.sourceforge.net/maven2" }
+    maven { url "https://raw.github.com/jacamo-lang/mvn-repo/master" }
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}
+
+dependencies {
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.12.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.1'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.0-alpha0'
+
+    // GSON used for serializing objects for RabbitMQ
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.rabbitmq:amqp-client:5.11.0'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation group: 'org.jason' , name: 'jason' , version: '2.6-SNAPSHOT',
+            changing: true, transitive: false
+
+    // Test Dependencies
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.7.1'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.7.7'
+
+}

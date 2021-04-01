@@ -1,0 +1,17 @@
+/* 
+ * Sample Jason Project
+ */
+
+MAS blackBoxAgent {
+
+    infrastructure: Centralised
+	environment: BlackBoxEnvironment
+
+	//executionControl: jason.control.ExecutionControlGUI
+
+	agents:
+	    agent #1;
+
+	aslSourcePath: "src/main/asl";
+}
+

@@ -1,0 +1,16 @@
+libs/
+bin/
+.classpath
+.gradle/
+.idea/
+out/
+.project
+.settings/
+build/
+run-server.sh
+/gradlew
+/gradlew.bat
+/.stop___MAS
+/gradle/
+e_r_r_o_r.txt
+**/**/gradle/
