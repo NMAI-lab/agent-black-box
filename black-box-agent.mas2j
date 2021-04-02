@@ -10,7 +10,7 @@ MAS blackBoxAgent {
 	//executionControl: jason.control.ExecutionControlGUI
 
 	agents:
-	    agent #1;
+	    agent agentArchClass BBAgArch #1;
 
 	aslSourcePath: "src/main/asl";
 }
